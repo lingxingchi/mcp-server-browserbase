@@ -1,5 +1,7 @@
 # Browserbase MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@browserbasehq/mcp-browserbase)](https://smithery.ai/server/@browserbasehq/mcp-browserbase)
+
 ![cover](assets/cover-mcp.png)
 
 [The Model Context Protocol (MCP)](https://modelcontextprotocol.io/introduction) is an open protocol that enables seamless integration between LLM applications and external data sources and tools. Whether you’re building an AI-powered IDE, enhancing a chat interface, or creating custom AI workflows, MCP provides a standardized way to connect LLMs with the context they need.
@@ -34,3 +36,11 @@ To learn to get started with Browserbase, check out [Browserbase MCP](./browserb
 ### Alternative Installation Methods
 
 [Smithery](https://smithery.ai/server/@browserbasehq/mcp-browserbase)
+
+### Installing via Smithery
+
+To install Browserbase MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@browserbasehq/mcp-browserbase):
+
+```bash
+npx -y @smithery/cli install @browserbasehq/mcp-browserbase --client claude
+```
