@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - browserbaseApiKey
+      - browserbaseProjectId
+    properties:
+      browserbaseApiKey:
+        type: string
+        description: Browserbase API key
+      browserbaseProjectId:
+        type: string
+        description: Browserbase project ID
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['dist/index.js'],
+      env: {
+        BROWSERBASE_API_KEY: config.browserbaseApiKey,
+        BROWSERBASE_PROJECT_ID: config.browserbaseProjectId
+      }
+    })
+  exampleConfig:
+    browserbaseApiKey: your_api_key_here
+    browserbaseProjectId: your_project_id_here
